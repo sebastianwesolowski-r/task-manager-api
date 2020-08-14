@@ -20,8 +20,6 @@ const sendFarewellEmail = (email, name) => {
         subject: "We are sad that you are leaving us",
         text: `Hey ${name} your account have been successfully deleted. You can help us with improving our platform`
     })
-    .then(() => console.log('message sent'))
-    .catch(e => console.log(e));
 };
 
 module.exports = {sendWelcomeEmail, sendFarewellEmail};

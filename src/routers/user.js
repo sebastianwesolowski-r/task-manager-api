@@ -76,15 +76,6 @@ router.post('/users/me/avatar', auth, upload.single('avatar'), async (req, res) 
 
 // GET
 
-router.get('/users', async (req, res) => {
-    try {
-        const users = await User.find({});
-        res.send(users);
-    } catch (e) {
-        res.status(500).send();
-    }
-});
-
 router.get('/users/me', auth, async (req, res) => {
     res.send(req.user);
 });
